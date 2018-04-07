@@ -7,7 +7,7 @@
     tools:context=".activities.MainActivity">
 
     <EditText
-        android:id="@+id/mEmailTv"
+        android:id="@+id/mUsernameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mEmailTv" />
+        app:layout_constraintTop_toBottomOf="@+id/mUsernameTv" />
 
     <Button
         android:id="@+id/mLoginBtn"

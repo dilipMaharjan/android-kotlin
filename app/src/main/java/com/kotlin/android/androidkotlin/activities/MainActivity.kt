@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mLoginBtn.setOnClickListener {
-            val email = mEmailTv.text.toString()
-            val auth = Authenticate().login(email, mPasswordTv.text.toString())
+            val username = mUsernameTv.text.toString()
+            val auth = Authenticate().login(username.trim(), mPasswordTv.text.toString().trim())
             if (auth) {
                 val intent = Intent(this, DashboardActivity::class.java).apply {
-                    putExtra("email", email)
+                    putExtra("username", username)
                 }
                 startActivity(intent)
             }

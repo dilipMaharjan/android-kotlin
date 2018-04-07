@@ -10,9 +10,9 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
-        val email = intent.getStringExtra("email")
+        val username = intent.getStringExtra("username")
         findViewById<TextView>(R.id.mWelcomeTv).apply {
-            text = email
+            text = username
         }
     }
 }
