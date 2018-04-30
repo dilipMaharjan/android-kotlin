@@ -11,4 +11,5 @@
             android:valueTo="0.5"
             android:valueType="colorType" />
     </objectAnimator>
+
 </set>
