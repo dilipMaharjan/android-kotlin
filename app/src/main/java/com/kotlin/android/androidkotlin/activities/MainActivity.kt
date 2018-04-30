@@ -4,6 +4,7 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.animation.ValueAnimator
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -43,8 +44,8 @@ class MainActivity : AppCompatActivity() {
 //        animateViewWithCode(view)
 //        animateViewWithXml(view)
 //        animateValue(view)
-        objectAnimator(view)
-        //     animationSet(view)
+//        objectAnimator(view)
+        animationSet(view)
     }
 
 
@@ -88,13 +89,11 @@ class MainActivity : AppCompatActivity() {
 
         val tranlateX = ObjectAnimator.ofFloat(view, "translationX", 0f, 400f)
         val tranlateY = ObjectAnimator.ofFloat(view, "translationY", 400f, 0f)
-        scaleX.duration = 1000
-        scaleY.duration = 1000
-        tranlateX.duration = 1000
-        tranlateY.duration = 1000
+        scaleX.duration=1000
+        scaleY.duration
         animatorSet.playSequentially(scaleX, tranlateX, scaleY, tranlateY)
-        animatorSet.start()
 
+        animatorSet.start()
     }
 
 }

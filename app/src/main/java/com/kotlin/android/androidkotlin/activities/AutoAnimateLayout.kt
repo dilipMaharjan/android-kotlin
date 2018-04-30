@@ -3,7 +3,9 @@ package com.kotlin.android.androidkotlin.activities
 import android.animation.Keyframe
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
+import android.support.v4.view.animation.PathInterpolatorCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.kotlin.android.androidkotlin.R
@@ -14,8 +16,11 @@ class AutoAnimateLayout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auto_animate_layout)
-        keyFrameAnimation(tv)
-        viewPropertyAnimator(button)
+//        keyFrameAnimation(tv)
+//        viewPropertyAnimator(button)
+//        drawableAnimation(button)
+        pathInterpolator(button)
+
     }
 
     fun keyFrameAnimation(view: View) {
@@ -33,4 +38,17 @@ class AutoAnimateLayout : AppCompatActivity() {
         view.animate().rotation(0f).rotation(30f).rotation(60f).rotation(90f).duration = 5000
     }
 
+    fun drawableAnimation(view: View) {
+        var animationDrawable = AnimationDrawable()
+        view.setBackgroundResource(R.drawable.animation_list)
+        view.background as AnimationDrawable
+        animationDrawable.start()
+    }
+
+    fun pathInterpolator(view: View) {
+        val pi = PathInterpolatorCompat.create(0.4f, 0f, 1f, 1f)
+        val oa = ObjectAnimator.ofFloat(view, "rotation", 0f,90f)
+        oa.interpolator = pi
+        oa.start()
+    }
 }
