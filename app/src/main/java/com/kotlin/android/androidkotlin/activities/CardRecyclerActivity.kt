@@ -15,7 +15,7 @@ class CardRecyclerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_recycler)
-        var layoutManager = GridLayoutManager(this, 3) as RecyclerView.LayoutManager
+        var layoutManager = GridLayoutManager(this, 4) as RecyclerView.LayoutManager
         card_recycler.layoutManager = layoutManager
         card_recycler.itemAnimator = DefaultItemAnimator()
         val adapter = UserAdapter(this, list())
