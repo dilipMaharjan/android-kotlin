@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.AnimationActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/circle_view"
+        android:layout_width="384dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/play_pause"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/animated_circle" />
+
+    <ImageView
+        android:id="@+id/play_pause"
+        android:layout_width="384dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle_view"
+        app:srcCompat="@drawable/animate_play_pause" />
+</android.support.constraint.ConstraintLayout>
