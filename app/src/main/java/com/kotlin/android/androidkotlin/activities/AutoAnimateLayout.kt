@@ -17,11 +17,11 @@ class AutoAnimateLayout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auto_animate_layout)
-        keyFrameAnimation(tv)
-        viewPropertyAnimator(button)
+//        keyFrameAnimation(tv)
+//        viewPropertyAnimator(button)
 //        drawableAnimation(button)
-//        pathInterpolator(button)
-        //    objectAnimatorXml(button)
+        pathInterpolator(button)
+//            objectAnimatorXml(button)
     }
 
     fun keyFrameAnimation(view: View) {

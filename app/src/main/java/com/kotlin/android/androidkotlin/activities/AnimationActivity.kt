@@ -1,5 +1,6 @@
 package com.kotlin.android.androidkotlin.activities
 
+import android.graphics.drawable.Animatable
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -27,19 +28,23 @@ class AnimationActivity : AppCompatActivity(), View.OnClickListener {
                     playPauseAnimation.start()
                 }
             }
+            R.id.play -> playAnimation.start()
         }
     }
 
     private lateinit var circleAnimation: AnimationDrawable
     private lateinit var playPauseAnimation: AnimationDrawable
+    private lateinit var playAnimation: Animatable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_circle_animation)
         circleAnimation = circle_view.drawable as AnimationDrawable
         playPauseAnimation = play_pause.drawable as AnimationDrawable
+        playAnimation = play.drawable as Animatable
         circle_view.setOnClickListener(this)
         play_pause.setOnClickListener(this)
+        play.setOnClickListener(this)
 
     }
 

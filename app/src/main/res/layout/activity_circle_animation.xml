@@ -20,7 +20,15 @@
         android:id="@+id/play_pause"
         android:layout_width="384dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/circle_view"
         app:layout_constraintTop_toBottomOf="@+id/circle_view"
         app:srcCompat="@drawable/animate_play_pause" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="384dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_pause"
+        app:srcCompat="@drawable/progress_bar" />
 </android.support.constraint.ConstraintLayout>
