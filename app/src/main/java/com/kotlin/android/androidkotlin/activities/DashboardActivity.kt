@@ -2,6 +2,8 @@ package com.kotlin.android.androidkotlin.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
+import android.support.constraint.ConstraintSet
 import android.widget.TextView
 import com.kotlin.android.androidkotlin.R
 
